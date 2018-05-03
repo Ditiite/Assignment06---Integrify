@@ -7,7 +7,11 @@ color: #ffe1bd;
 }
 
 body {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
     width: 100%;
+    margin: 0 auto;
+    display: border-box;
 }
 
 /***** HEADER *****/
@@ -33,4 +37,80 @@ nav ul{
 
 nav a {
     padding: 10px 15px;
+}
+
+/******* MAIN CONTAINER *******/
+
+.we-are-clemo {
+    /* width: 100%; */
+    position: relative;
+    padding: 100px 50px 50px;
+    height: 550px;
+}
+
+.bird-girl {
+    height: 550px;
+    width: 90%;
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.bird-girl img {
+    width: 100%;
+}
+
+.orange-opacity {
+    height: 550px;
+    position: absolute;
+    width: 90%;
+    background-color: rgba(255, 215, 167, 0.8);
+    z-index: 2;
+    text-align: center;
+}
+
+.orange-text { margin-top: 150px; }
+
+.orange-text h1 { font-size: 3em; }
+
+.orange-text p { 
+    font-size: 1.8em;
+    padding: 30px 0;
+}
+
+.orange-text img { 
+    width: 50px;
+}
+
+.orange-text a {
+    background-color: rgb(14, 14, 14);
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 25px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+/*************** WHAT WE DO GRID ***********/
+.wrapper {
+    padding: 50px;
+    display: grid;
+    grid-gap: 100px;
+    grid-template-columns: 50% 50%;  
+    grid-template-rows: 500px 500px; 
+    grid-area: 
+        " title title"
+        "img text"
+        "text img"
+        "img text";
+}
+
+.wrapper div{
+    border: 1px solid silver;
+}
+
+.wrapper img {
+    width: 100%;
+    object-fit: cover; 
+    object-position: 100% 100%; 
 }
