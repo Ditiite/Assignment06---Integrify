@@ -22,23 +22,24 @@
         <nav>
             <ul>
                 <li>
-                    <a>about us</a>
+                    <a href="#">about us</a>
                 </li>
                 <li>
-                    <a>services</a>
+                    <a href="#">services</a>
                 </li>
                 <li>
-                    <a>works</a>
+                    <a href="#">works</a>
                 </li>
                 <li>
-                    <a>blog</a>
+                    <a href="#">blog</a>
                 </li>
                 <li>
-                    <a>contact</a>
+                    <a href="#">contact</a>
                 </li>
             </ul>
         </nav>
     </header>
+
     <!-- MAIN CONTAINER -->
     <div class="container">
         <section class="we-are-clemo">
@@ -56,6 +57,14 @@
                         <br /> in the creative industries
                     </p>
                     <a class="black-link" href="#">learn more</a>
+                    <div class="checkbox">
+                        <input id="check1" type="checkbox">
+                        <label for="check1"></label>
+                        <input id="check2" type="checkbox">
+                        <label for="check2"></label>
+                        <input id="check3" type="checkbox">
+                        <label for="check3"></label>
+                    </div>
                 </div>
             </div>
         </section>
@@ -119,8 +128,8 @@
                     eos qui ratione voluptatem sequi nesciunt.</p>
                 <a href="#">learn more</a>
             </div>
-
         </section>
+
         <!-- IMG GALLERY -->
         <section class="black-white-img">
             <h1 class="section-title">our best work</h1>
@@ -138,9 +147,7 @@
         <!-- BEST TEAM -->
         <section class="team">
             <h1 class="section-title">best team</h1>
-            <div>
-                <i class="fas fa-angle-left"></i>
-            </div>
+            <i class="fas fa-angle-left"></i>
             <div>
                 <img class="round-img" src="images/team1.jpg" alt="Man with the glasses" />
                 <h2>paul hall</h2>
@@ -159,8 +166,11 @@
                 <img src="images/line.png" alt="Black line" />
                 <h5>artist, designer</h5>
             </div>
-            <div>
-                <i class="fas fa-angle-right"></i>
+            <i class="fas fa-angle-right"></i>
+            <div class="diamonds">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </section>
 
@@ -197,19 +207,32 @@
                 <i class="far fa-envelope"></i>
                 
                 <div id="icons">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fas fa-camera-retro"></i>
-                    <i class="fab fa-pinterest"></i>
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-google-plus-g"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-pinterest"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
                 </div>
                 
                 <input class="name" placeholder="name">
                 <input class="e-mail" placeholder="e-mail">
-                <input class="message" placeholder="your message">
-                <a class="contact-link" href="#">learn more</a>
+                <textarea class="message" placeholder="your message"></textarea>
+                <div class="contact-link">
+                    <a href="#">learn more</a>
+                </div>
             </div>
-            <div>
-                <p>Made with<i class="fas fa-heart yellow"></i> by <a class="yellow" href="#">BootstrapThemes</a> 2016. All Rights Reserved</p>
+            <div class="copyrights">
+                <p>Made <span>with <i class="fas fa-heart yellow"></i> by <a class="yellow" href="#">BootstrapThemes </a>.</span> All Rights Reserved</p>
             </div>
 
         </footer>

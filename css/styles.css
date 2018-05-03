@@ -1,6 +1,4 @@
-/** 
-color: #ffe1bd;
-*/
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +12,12 @@ body {
 
 .container {
     width: 100%;
-    margin: 0 auto;
+}
+
+input,
+textarea,
+a {
+    outline-color: #838282;
 }
 
 /***** HEADER *****/
@@ -50,18 +53,20 @@ a {
 /******* MAIN CONTAINER *******/
 
 .we-are-clemo {
-    /* width: 100%; */
     position: relative;
-    padding: 100px 50px 50px;
+    margin: 0 50px 100px;
+    padding-top: 100px; 
     height: 550px;
+    box-sizing: border-box;
 }
 
 .bird-girl {
     height: 550px;
-    width: 90%;
+    width: 100%;
     position: absolute;
     z-index: 1;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .bird-girl img {
@@ -71,10 +76,11 @@ a {
 .orange-opacity {
     height: 550px;
     position: absolute;
-    width: 90%;
+    width: 100%;
     background-color: rgba(255, 215, 167, 0.8);
     z-index: 2;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .orange-text { margin-top: 150px; }
@@ -99,11 +105,40 @@ a {
     letter-spacing: 2px;
 }
 
+/* Checkbox new design */
+.checkbox input {
+    left: -9999px;
+}
+
+.checkbox input[type="checkbox"] {
+    /* opacity: 0; */
+    display: none;
+}
+
+/* Create the checkbox */
+.checkbox label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+}
+
+.checkbox label::before {
+    content: "";
+    height: 10px;
+    width: 10px;
+    margin: 10px;
+    border: 2px solid #080808;
+    transform: rotate(-45deg);
+    position: absolute;
+    right: 0;
+}
+
 /*************** WHAT WE DO GRID ***********/
 .wrapper {
+    box-sizing: border-box;
     padding: 50px;
     display: grid;
-    grid-gap:  80px 20px;
+    grid-gap: 20px;
     grid-template-columns: 1fr 1fr;  
     grid-template-areas: 
         " title title"
@@ -136,10 +171,13 @@ a {
 
 .grid-header h1 {
     font-weight: 100;
+    padding: 55px;
 }
 
 .card1,
 .card3 { padding-left: 80px; }
+
+.card2 { padding-right: 80px; }
 
 .card1 p,
 .card2 p,
@@ -187,6 +225,7 @@ a {
     justify-self: center;
     grid-column: 1/-1;
     grid-area: title;
+    padding: 60px 0;
 }
 
 .span-1 { grid-area: span-1; }
@@ -224,27 +263,47 @@ a {
         "diamond diamond diamond diamond diamond"
 }
 
-.team { padding: 100px 0; }
 .team div { 
     padding: 20px; 
     text-align: center;
 }
 
-.round-img { width: 150px; }
+.diamonds {
+    grid-area: diamond;
+}
 
+.diamonds span {
+    content: "";
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    margin: 10px;
+    border: 2px solid #080808;
+    transform: rotate(-45deg);
+}
+
+.team { padding: 100px 0; }
+.round-img { width: 150px; }
 .team i { font-size: 100px; }
 
 .team h2 { 
     justify-self: center;
-    font-size: 2em;
+    font-size: 2.7em;
+}
+
+.team h5 { 
+    color: #696969;
+    font-size: 1em;
+    font-weight: 400;
+    padding-top: 20px;
 }
 
 /****** CLIENTS SAYS *****/
 .clients {
-    padding: 100px 50px;
+    padding: 50px;
     display: grid;
-    grid-gap: 80px;
-    grid-template-columns: 1fr 1fr;
+    grid-gap: 60px 90px;
+    grid-template-columns: 4fr 5fr;
     grid-template-areas: 
         "title title"
         "name text"
@@ -284,28 +343,82 @@ a {
         "fa-mobile-alt phone email1"
         "fa-envelope our-email message"
         "icons icons message"
-        ". . a"
-        "made made made"; 
+        ". . a"; 
 }
 
 .address { grid-area: address; }
 .phone { grid-area: phone; }
 .our-email { grid-area: our-email; }
-#icons {
-    grid-area: icons;
-}
 .name { grid-area: name; }
 .e-mail { grid-area: email1; }
 .message { grid-area: message; }
 .contact-link { grid-area: a; }
 
-input {
+.contact-link a {
+    color: #474646;
+    padding: 10px 15px;
+    border: 1px solid #474646;
+    border-radius: 25px;
+    background-color: #fff;
+}
+
+#icons {
+    padding-left: 28px;
+    grid-area: icons;
+    text-align: center;
+    justify-self: left;
+}
+
+i.fab {
+    display: inline-block;
+    border-radius: 50%;
+    padding: 0.8em 0.1em;
+    margin: 5px;
+    background-color: #fff;
+    width: 50px;
+    color: #474646;
+  }
+
+input,
+textarea {
     background: transparent;
     border: none;
     border-bottom: 1px solid #afadad;
+    font-size: 1.3em;
+    line-height: 70px;
 }
 
-.fa-map-marker { grid-area: fa-map-marker; }
-.fa-mobile-alt { grid-area: fa-mobile-alt; }
-.fa-envelope { grid-area: fa-envelope; }
+textarea {
+    height: 65px;
+}
+
+.fa-map-marker {
+    justify-self: end;
+    grid-area: fa-map-marker; 
+}
+
+.fa-mobile-alt { 
+    justify-self: end;
+    grid-area: fa-mobile-alt; 
+}
+
+.fa-envelope {
+    justify-self: end;
+    grid-area: fa-envelope; 
+}
+
+.footer-img p {
+    font-size: 1.2em;
+}
+
+.copyrights {
+    font-size: 0.9em;
+    grid-area: made; 
+    background-color: #fff;
+    color: #838282;
+    text-align: center;
+    padding: 50px;
+}
+
+.copyrights span { word-spacing: 15px;}
 .yellow { color: rgb(253, 152, 37); }
