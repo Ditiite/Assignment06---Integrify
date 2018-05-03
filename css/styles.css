@@ -1,3 +1,36 @@
 /** 
 color: #ffe1bd;
 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+}
+
+/***** HEADER *****/
+header {
+    position: fixed;
+    display: inline-flex;
+    background-color: rgb(254, 250, 245); 
+    width: 100%;
+    justify-content: space-between;
+    box-shadow: 1px 0 10px rgb(235, 235, 235);
+}
+
+header img {
+    padding: 20px;
+}
+
+nav ul{
+    display: inline-flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 20px;
+}
+
+nav a {
+    padding: 10px 15px;
+}
