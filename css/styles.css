@@ -9,9 +9,12 @@ color: #ffe1bd;
 body {
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
+    display: border-box;
+}
+
+.container {
     width: 100%;
     margin: 0 auto;
-    display: border-box;
 }
 
 /***** HEADER *****/
@@ -21,22 +24,27 @@ header {
     background-color: rgb(254, 250, 245); 
     width: 100%;
     justify-content: space-between;
-    box-shadow: 1px 0 10px rgb(235, 235, 235);
+    box-shadow: 1px 7px 10px rgb(235, 235, 235);
+    z-index: 3;
 }
 
 header img {
-    padding: 20px;
+    padding: 20px 50px;
 }
 
 nav ul{
     display: inline-flex;
     justify-content: flex-end;
     list-style: none;
-    padding: 20px;
+    padding: 20px 50px;
 }
 
 nav a {
     padding: 10px 15px;
+}
+
+a {
+    text-decoration: none;
 }
 
 /******* MAIN CONTAINER *******/
@@ -82,7 +90,7 @@ nav a {
     width: 50px;
 }
 
-.orange-text a {
+.black-link{
     background-color: rgb(14, 14, 14);
     color: #fff;
     padding: 15px 20px;
@@ -95,22 +103,209 @@ nav a {
 .wrapper {
     padding: 50px;
     display: grid;
-    grid-gap: 100px;
-    grid-template-columns: 50% 50%;  
-    grid-template-rows: 500px 500px; 
-    grid-area: 
+    grid-gap:  80px 20px;
+    grid-template-columns: 1fr 1fr;  
+    grid-template-areas: 
         " title title"
-        "img text"
-        "text img"
-        "img text";
+        "img1 text1"
+        "text2 img2"
+        "img3 text3";
+    background-color: #f9f9f9;
 }
 
-.wrapper div{
-    border: 1px solid silver;
-}
+.image1 { grid-area: img1; }
+.image2 { grid-area: img2; }
+.image3 { grid-area: img3; }
+.card1 { grid-area: text1; }
+.card2 { grid-area: text2; }
+.card3 { grid-area: text3; }
 
-.wrapper img {
+.image1 img,
+.image2 img,
+.image3 img {
     width: 100%;
     object-fit: cover; 
     object-position: 100% 100%; 
 }
+
+.grid-header {
+     grid-area: title;
+     font-size: 2.5em;
+     text-align: center;
+}
+
+.grid-header h1 {
+    font-weight: 100;
+}
+
+.card1,
+.card3 { padding-left: 80px; }
+
+.card1 p,
+.card2 p,
+.card3 p {
+    color: rgb(158, 158, 158);
+    margin: 30px 0;
+}
+
+/**** TITLES FOR SMALLER GRID TEXT *******/
+.wrapper h2 span {
+    font-size: 0.5em;
+    font-weight: 400;
+}
+.wrapper h2  {
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.wrapper a {
+    color: rgb(34, 33, 33);
+    text-decoration: none;
+    border: 1px solid rgb(158, 158, 158);
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #fff;
+}
+
+/*****  BLACK AND WHITE IMAGES *******/
+.black-white-img {
+    justify-content: center;
+    padding: 50px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-flow: dense;
+    grid-template-areas: 
+        "title title title"
+        "span-1 span-2 span-3"
+        "span-4 span-2 span-6"
+        "span-4 span-5 span-6"
+        "link link link";
+}
+
+.section-title {
+    justify-self: center;
+    grid-column: 1/-1;
+    grid-area: title;
+}
+
+.span-1 { grid-area: span-1; }
+.span-2 { grid-area: span-2; }
+.span-3 { grid-area: span-3; }
+.span-4 { grid-area: span-4; }
+.span-5 { grid-area: span-5; }
+.span-6 { grid-area: span-6; }
+.link { grid-area: link; }
+
+.section-title {
+    font-size: 3.4em;
+    font-weight: 100;
+}
+
+.black-white-img img {
+     width: 100%;
+}
+
+.link { 
+    justify-self: center;
+    margin: 50px;
+}
+
+/*******  TEAM ********/
+.team {
+    background-color: #ffe2b7;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+    grid-template-areas: 
+        "title title title title title"
+        "arow-left  face1 face2 face3 arrow-right"
+        "arow-left face-name face-name face-name arrow-right"
+        "diamond diamond diamond diamond diamond"
+}
+
+.team { padding: 100px 0; }
+.team div { 
+    padding: 20px; 
+    text-align: center;
+}
+
+.round-img { width: 150px; }
+
+.team i { font-size: 100px; }
+
+.team h2 { 
+    justify-self: center;
+    font-size: 2em;
+}
+
+/****** CLIENTS SAYS *****/
+.clients {
+    padding: 100px 50px;
+    display: grid;
+    grid-gap: 80px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "title title"
+        "name text"
+        "images images"
+        "round round";
+}
+
+.empty-img {
+    grid-area: images;
+    justify-self: center;
+}
+
+.empty-img img { width: 100px; }
+
+.client-name { 
+    text-align: right;
+    justify-self: end;
+}
+
+.clients p { color: rgb(158, 158, 158); }
+.p-smaller { padding-right: 100px; }
+
+/****** FOOTER ********/
+.footer-img {
+    background: linear-gradient(rgba(33, 33, 33, 0.8), rgba(33, 33, 33, 0.8)), url('../images/tuchbg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    color: #fff;
+    padding: 100px 50px;
+    grid-gap: 40px;
+    grid-template-columns: 50px 1fr 1fr;
+    grid-template-areas:
+        "title title title"
+        "fa-map-marker address name"
+        "fa-mobile-alt phone email1"
+        "fa-envelope our-email message"
+        "icons icons message"
+        ". . a"
+        "made made made"; 
+}
+
+.address { grid-area: address; }
+.phone { grid-area: phone; }
+.our-email { grid-area: our-email; }
+#icons {
+    grid-area: icons;
+}
+.name { grid-area: name; }
+.e-mail { grid-area: email1; }
+.message { grid-area: message; }
+.contact-link { grid-area: a; }
+
+input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #afadad;
+}
+
+.fa-map-marker { grid-area: fa-map-marker; }
+.fa-mobile-alt { grid-area: fa-mobile-alt; }
+.fa-envelope { grid-area: fa-envelope; }
+.yellow { color: rgb(253, 152, 37); }
