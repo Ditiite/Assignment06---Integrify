@@ -24,26 +24,27 @@ a {
 header {
     position: fixed;
     display: inline-flex;
-    background-color: rgb(254, 250, 245); 
     width: 100%;
     justify-content: space-between;
-    box-shadow: 1px 7px 10px rgb(235, 235, 235);
+    box-shadow: 1px 3px 6px rgb(235, 235, 235);
     z-index: 3;
+    background-color: #fff;
 }
 
 header img {
-    padding: 20px 50px;
+    padding: 30px 50px;
 }
 
 nav ul{
     display: inline-flex;
     justify-content: flex-end;
     list-style: none;
-    padding: 20px 50px;
+    padding: 30px 50px;
 }
 
 nav a {
     padding: 10px 15px;
+    color: #696969;
 }
 
 a {
@@ -71,6 +72,8 @@ a {
 
 .bird-girl img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .orange-opacity {
@@ -81,6 +84,23 @@ a {
     z-index: 2;
     text-align: center;
     box-sizing: border-box;
+}
+
+.orange-text {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 30px 1fr 30px;
+    grid-template-areas: 
+        " . orange-container checkbox"
+}
+
+.orange-container {
+    grid-area: orange-container;
+}
+
+.checkbox {
+    grid-area: checkbox;
+    align-self: center;
 }
 
 .orange-text { margin-top: 150px; }
@@ -127,7 +147,7 @@ a {
     height: 10px;
     width: 10px;
     margin: 10px;
-    border: 2px solid #080808;
+    border: 1px solid #080808;
     transform: rotate(-45deg);
     position: absolute;
     right: 0;
@@ -272,6 +292,8 @@ a {
     grid-area: diamond;
 }
 
+.diamonds span:hover { border: 2px solid red;}
+
 .diamonds span {
     content: "";
     display: inline-block;
@@ -284,7 +306,42 @@ a {
 
 .team { padding: 100px 0; }
 .round-img { width: 150px; }
-.team i { font-size: 100px; }
+
+
+.angle-left span{
+    content: "";
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    border-top: 2px solid;
+    border-left: 2px solid;
+    border-color: #080808;
+    transform: rotate(-45deg);
+}
+
+
+.angle-right span{
+    content: "";
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    border-top: 2px solid #080808;
+    border-right: 2px solid #080808;
+    transform: rotate(45deg);
+}
+
+.angle-right,
+.angle-left {
+    align-self: center;
+}
+
+.angle-right span:hover,
+.angle-left span:hover {
+    border-color: white;
+    cursor: pointer;
+}
 
 .team h2 { 
     justify-self: center;
@@ -325,6 +382,26 @@ a {
 
 .clients p { color: rgb(158, 158, 158); }
 .p-smaller { padding-right: 100px; }
+
+.clients li {
+    content: "";
+    height: 10px;
+    width: 10px;
+    margin: 10px;
+    border: 2px solid #080808;
+    border-radius: 50%;
+    width: 10px;
+}
+
+.round-circle ul {
+    list-style: none;
+    display: inline-flex;
+}
+
+.round-circle {
+    grid-area: round;
+    justify-self: center;
+}
 
 /****** FOOTER ********/
 .footer-img {

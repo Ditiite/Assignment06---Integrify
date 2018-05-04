@@ -1,0 +1,71 @@
+@media screen and (max-width: 600px ) {
+    header { 
+        position: relative;
+        flex-direction: column;
+    }
+
+    .we-are-clemo,
+    .orange-text { grid-template-columns: 10px 1fr 30px; }
+    .orange-text h1 { font-size: 2em; }
+    .orange-text p { font-size: 1em; }
+
+    .wrapper {
+        grid-template-columns: 1fr;  
+        grid-template-areas: 
+            "title"
+            "text1"
+            "img1"
+            "text2"
+            "img2"
+            "text3"
+            "img3" ;
+    }
+
+    .black-white-img {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "title"
+            "span-1" 
+            "span-2" 
+            "span-3"
+            "span-4" 
+            "span-5"  
+            "span-6"
+            "link";
+    }
+    .team {
+        grid-template-columns: 20px 1fr 20px;
+        grid-template-areas: 
+            "title title title"
+            "arow-left  face1 arrow-right"
+            "arow-left face2 arrow-right"
+            "arow-left face3 arrow-right"
+            "arow-left face-name arrow-right"
+            "diamond  diamond diamond"
+    }
+
+    .clients {
+        padding: 20px;
+        grid-gap: 30px 60px;
+        grid-template-columns: 4fr 5fr;
+        grid-template-areas: 
+            "title title"
+            "name text"
+            "images images"
+            "round round";
+    }
+
+    .footer-img {
+        grid-template-columns: 50px 1fr;
+        grid-template-areas:
+            "title title"
+            "fa-map-marker address" 
+            "fa-mobile-alt phone"
+            "fa-envelope our-email"
+            "name name" 
+            "email1 email1"
+            "message message"
+            "icons icons" 
+            "a a"; 
+    }
+}
