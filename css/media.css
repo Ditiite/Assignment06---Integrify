@@ -147,6 +147,18 @@
     }
 
     .link { margin: 10px; }
+
+    .contact-link {
+        justify-self: center;
+        font-size: 0.8em;
+    }
+
+    .contact-link a { padding: 5px 15px; }
+
+    .copyrights {
+        padding: 20px;
+        font-size: 0.7em;
+    }
 }
 
 @media screen and (min-width: 1400px ) {
