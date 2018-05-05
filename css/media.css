@@ -10,8 +10,12 @@
     nav ul {
         flex-wrap: wrap;
         padding: 10px;
+        justify-content: center;font-size: 15px;
     }
 
+    header img {
+        margin: 0 auto;
+    }
     .we-are-clemo,
     .orange-text { grid-template-columns: 10px 1fr 30px; }
     .orange-text h1 { font-size: 2em; }
